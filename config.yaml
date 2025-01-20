@@ -1,0 +1,4 @@
+samples:
+   - ERR1193759
+   - ERR4423494
+reference: "reference_genome/H37RV.fasta" 
