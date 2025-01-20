@@ -7,7 +7,7 @@ rule all:
         expand("results/norm_vcf/{sample}_normalized.vcf.gz", sample=config["samples"]),
         expand("results/norm_vcf/{sample}_normalized.vcf.gz.tbi", sample=config["samples"])
 
-rule fastqc:
+rule Fastqc:
     input:
         "tb_data/{sample}_1.fastq.gz",
         "tb_data/{sample}_2.fastq.gz"
@@ -49,7 +49,7 @@ rule Alignment:
         bwa mem -K 10000000 -c 100 -R "{params.read_group}" -M -T 50 {input.ref} {input.r1_paired} {input.r2_paired} > {output}
         """
 
-rule sort_and_markdup:
+rule Sort_and_markdup:
     input:
         sam="results/sam_files/{sample}.sam"
     output:
@@ -79,7 +79,7 @@ rule Variant_calling:
         gatk HaplotypeCaller -R {input.ref} -I {input.bam} -O {output} -A StrandBiasBySample
         """
 
-rule normalize_vcf:
+rule Normalize_vcf:
     input:
         ref=config["reference"],
         raw_vcf="results/raw_vcf/{sample}_raw.vcf.gz"
