@@ -1,0 +1,8 @@
+name: bcftools-env
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bcftools=1.9
+  - tabix=1.11
