@@ -1,0 +1,2 @@
+samples: "config/samplesheet.csv"
+reference: "reference/H37RV.fasta" 
