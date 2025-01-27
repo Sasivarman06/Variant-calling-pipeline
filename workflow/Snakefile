@@ -1,0 +1,26 @@
+
+include: "rules/common.smk"
+
+rule all:
+    input:
+        expand("results/fastqc_report/{sample}_1_fastqc.html", sample=samples.index),
+        expand("results/fastqc_report/{sample}_2_fastqc.html", sample=samples.index),
+        expand("results/norm_vcf/{sample}_normalized.vcf.gz", sample=samples.index),
+        expand("results/norm_vcf/{sample}_normalized.vcf.gz.tbi", sample=samples.index)
+
+include: "rules/qc.smk"
+include: "rules/trimming-trimmomatic.smk"
+include: "rules/alignment-bwa-mem.smk"
+include: "rules/dedup-samtools.smk"
+include: "rules/variant-calling-gatk.smk"
+include: "rules/normalization-bcftools.smk"
+   
+
+  
+        
+
+
+
+
+
+
