@@ -1,4 +1,4 @@
-```markdown name=README.md url=https://github.com/Sasivarman06/Variant-calling-pipeline/blob/main/README.md
+
 # Variant-calling-pipeline
 
 A Snakemake-based Whole Genome Sequencing (WGS) and Whole Exome Sequencing (WES) variant calling pipeline using BWA, GATK, and bcftools.
@@ -28,14 +28,14 @@ This pipeline automates the complete variant calling workflow for genomic analys
 
 ### Directory Structure
 
-```
+
 Variant-calling-pipeline/
 ├── config/              # Configuration files for pipeline parameters
 ├── reference/           # Reference genome files
 ├── tb_data/             # Sample/test data directory
 ├── workflow/            # Snakemake workflow rules and scripts
 └── . gitattributes       # Git attributes configuration
-```
+
 
 ## Getting Started
 
