@@ -26,17 +26,6 @@ This pipeline automates the complete variant calling workflow for genomic analys
 - **bcftools**: Tools for VCF/BCF file processing
 - **Python**: Pipeline scripting and automation
 
-### Directory Structure
-
-
-Variant-calling-pipeline/
-├── config/              # Configuration files for pipeline parameters
-├── reference/           # Reference genome files
-├── tb_data/             # Sample/test data directory
-├── workflow/            # Snakemake workflow rules and scripts
-└── . gitattributes       # Git attributes configuration
-
-
 ## Getting Started
 
 ### Prerequisites
