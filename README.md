@@ -88,4 +88,4 @@ The pipeline generates:
 - VCF (Variant Call Format) files containing detected variants
 - Quality control reports
 - Log files for troubleshooting
-```
+
